@@ -17,4 +17,14 @@ class MamiferoController
         return new Response('Zoologico');
     }
 
+    /**
+     * @Route("/mamifero/{slug}")
+     */
+    public function show($slug)
+    {
+        return new Response(
+            sprintf(
+                'Esta é a pagina de detalhe do mamifero "%s"',str_replace('-',' ',$slug)));
+    }
+
 }
