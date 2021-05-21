@@ -4,10 +4,11 @@
 namespace App\Controller;
 
 
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class MamiferoController
+class MamiferoController extends AbstractController
 {
     /**
      * @Route("/")
@@ -22,9 +23,17 @@ class MamiferoController
      */
     public function show($slug)
     {
-        return new Response(
-            sprintf(
-                'Esta é a pagina de detalhe do mamifero "%s"',str_replace('-',' ',$slug)));
-    }
+        $respostas = [
+            'Resposta 1',
+            'Resposta 2',
+            'Resposta 3',
+            'Resposta 4',
+            'Resposta 5',
+            'Resposta 6',
+        ];
 
+        return $this->render('mamiferos/show.html.twig', ['animal' => ucwords(str_replace('-', ' ', $slug)),
+            'respostas'=>$respostas]);
+
+    }
 }
