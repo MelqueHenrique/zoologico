@@ -31,7 +31,7 @@ class MamiferoController extends AbstractController
             'Resposta 5',
             'Resposta 6',
         ];
-
+    dump($respostas,$this);
         return $this->render('mamiferos/show.html.twig', ['animal' => ucwords(str_replace('-', ' ', $slug)),
             'respostas'=>$respostas]);
 
