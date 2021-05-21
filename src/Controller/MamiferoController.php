@@ -15,7 +15,7 @@ class MamiferoController extends AbstractController
      */
     public function homepage()
     {
-        return new Response('Zoologico');
+        return $this->render('mamiferos/homepage.html.twig');
     }
 
     /**
