@@ -10,7 +10,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class MessagesController extends AbstractController
 {
     /**
-     * @Route("/messages/{id}/like/{direction}")
+     * @Route("/messages/{id<\d+>}/like/{direction<like|dislike>}", methods={"POST"})
      */
     public function messagesLike($id,$direction)
     {
