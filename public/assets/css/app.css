@@ -1,3 +1,12 @@
 h1{
     color: #a5673a;
 }
+
+.carousel{
+    background-color: black;
+}
+
+.carousel-item img{
+    height: auto !important;
+    opacity: 0.2;
+}

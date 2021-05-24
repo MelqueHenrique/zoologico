@@ -11,7 +11,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class MamiferoController extends AbstractController
 {
     /**
-     * @Route("/")
+     * @Route("/", name="app_home_page")
      */
     public function homepage()
     {

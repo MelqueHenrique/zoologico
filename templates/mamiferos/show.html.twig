@@ -10,7 +10,7 @@
         <div class="container-fluid py-5">
             <h1 class="display-5 fw-bold">Mamíferos</h1>
             <p class="col-md-8 fs-4">Esta é a página de detalhes do mamifero {{ animal }}.</p>
-            <button class="btn btn-primary btn-lg" type="button">Example button</button>
+            <a href="{{ path('app_home_page',{'_fragment':'mamiferos'}) }}"><button class="btn btn-primary btn-lg" type="button">Voltar para Home.</button></a>
         </div>
         <div class="list-group">
             <a href="#" class="list-group-item list-group-item-action active" aria-current="true"> Esta Lista Contém {{ respostas|length }} Itens.</a>
@@ -18,12 +18,5 @@
             <a href="#" class="list-group-item list-group-item-action" aria-current="true">{{ resposta }}</a>
             {% endfor %}
         </div>
-
-        {% if animal == "Gato" %}
-            <br>
-            Nossa, um <strong>Gato</strong>!
-        {% endif %}
-
-    </div>
 
 {% endblock %}
