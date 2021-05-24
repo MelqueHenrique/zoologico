@@ -7,14 +7,19 @@ namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Twig\Environment;
 
 class MamiferoController extends AbstractController
 {
     /**
      * @Route("/", name="app_home_page")
      */
-    public function homepage()
+    public function homepage(Environment $twigEnvironment)
     {
+        /*Exemplo de serviços: versão extendida*/
+//        $html = $twigEnvironment->render('mamiferos/homepage.html.twi');
+//        return new Response($html);
+        /*Exemplo de serviços*/
         return $this->render('mamiferos/homepage.html.twig');
     }
 
